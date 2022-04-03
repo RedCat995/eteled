@@ -56,6 +56,7 @@ class TitleState extends MusicBeatState
 		#if android
 		FlxG.android.preventDefaultKeys = [BACK];
 		#end
+		#if android FlxG.android.justReleased.BACK #end
 		/*#if polymod
 		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
 		#end*/
