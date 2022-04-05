@@ -42,6 +42,26 @@ class Main extends Sprite
 	{
 		super();
 		SUtil.gameCrashCheck();
+		SUtil.saveContent("VS Eteled", "something.txt", "lololol");
+
+                //The file location where is saved, will be where the assets and mods are located in phone storage in system-saves folder
+		
+		#if android
+                var justTouched:Bool = false;
+
+		for (touch in FlxG.touches.list)
+		{
+			if (touch.justPressed)
+			{
+				justTouched = true;
+			}
+		}
+		#end
+
+                if (controls.ACCEPT #if android || justTouched #end)
+                {
+                        //Will do something
+                }
 
 		if (stage != null)
 		{
